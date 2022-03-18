@@ -38,7 +38,7 @@ public class Listerner extends BasePage implements ITestListener {
 		String finalDateTime = dtf.format(dateTime);
 		Reporter.log("Your test is success :- " + result.getMethod().getMethodName());
 		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destination = new File("./testScerrenshots/passedTestCases/" + result.getMethod().getMethodName() + "" + finalDateTime+".png");
+		File destination = new File("./test-output/passed-tests/" + result.getMethod().getMethodName() + "" + finalDateTime+".png");
 		try {
 			FileUtils.copyFile(source, destination);
 		} catch (IOException e) {
@@ -49,11 +49,12 @@ public class Listerner extends BasePage implements ITestListener {
 	@Override
 	public void onTestFailure(ITestResult result) {
 		LocalDateTime dateTime=LocalDateTime.now();
-		DateTimeFormatter format=DateTimeFormatter .ofPattern("dd|_MM_yyyy_hh_mm_ss");
+		DateTimeFormatter format=DateTimeFormatter .ofPattern("dd_MM_yyyy_hh_mm_ss");
 		String finalDateTime=format.format(dateTime);
 		Reporter.log("Your test is failed :- " + result.getMethod().getMethodName());
         File source=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        File destination=new File ("./testScreenshots/failedTestCases/"+result.getMethod().getMethodName()+""+finalDateTime+".png");
+      // File destination=new File ("./failedTestCases//"+result.getMethod().getMethodName()+""+finalDateTime+".png");
+        File destination=new File ("./test-output/failed-tests/"+result.getMethod().getMethodName()+""+finalDateTime+".png");
         try {
 			FileUtils.copyFile(source, destination);
 		} catch (IOException e) {

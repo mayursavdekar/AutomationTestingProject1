@@ -17,7 +17,7 @@ public class SearchProductResultPage extends BasePage {
 
 	@FindBy(xpath = "//span[@class='heading-counter']")
 	WebElement searchResultText;
-	@FindBy(xpath = "(//h5/a[@class='product-name'])[position()=1]")
+	@FindBy(xpath = "(//h5/a[@class='product-name'])[position()=2]")
 	WebElement searchedItem;
 	
 	public SearchProductResultPage() {

@@ -17,7 +17,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 
-public class paymentValidationsTest extends BasePage {
+public class paymentCalculationsTest extends BasePage {
 	Address address;
 
 	@BeforeMethod
@@ -53,9 +53,8 @@ public class paymentValidationsTest extends BasePage {
 		ShippingPage shippping = address.clickProceedToCheckOut();
 		shippping.clickTermsAndConditionCheckbox();
 	    PaymentPage payment = shippping.clickProceedToCheckOut();
-	    boolean result = payment.validatePaymentPage();
-	    Assert.assertTrue(result);
-		
+	     payment.validatePaymentPage();
+	     Assert.assertTrue(payment.validatePaymentCalculations());
 	}
 
 }

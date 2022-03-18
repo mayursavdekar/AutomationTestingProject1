@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MayurSuite]">
+  <test thread-count="5" name="MayurTest(failed)">
+    <classes>
+      <class name="com.mayur.testcases.ForTest">
+        <methods>
+          <include name="start"/>
+          <include name="g"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.mayur.testcases.ForTest -->
+    </classes>
+  </test> <!-- MayurTest(failed) -->
+</suite> <!-- Failed suite [MayurSuite] -->

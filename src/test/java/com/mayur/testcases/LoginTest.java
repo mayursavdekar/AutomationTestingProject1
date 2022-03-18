@@ -47,13 +47,11 @@ public class LoginTest extends BasePage {
 					excel.setCellData("Sheet1", i, "result", "FAIL");
 					driver.navigate().to(url);
 				}
-				
 			}
 			else {
 				excel.setCellData("Sheet1", i, "result", "FAIL");
 				driver.navigate().to(url);
 			}
-
 		}
 	}
 }

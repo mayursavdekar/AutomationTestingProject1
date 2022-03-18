@@ -1,25 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[Your test is started :- Default test]]>
+    </line>
+    <line>
+      <![CDATA[Your test is started :- f]]>
+    </line>
+    <line>
+      <![CDATA[Your test is success :- f]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="38426" started-at="2022-03-17T03:14:36Z" finished-at="2022-03-17T03:15:14Z">
+  <suite name="Default suite" duration-ms="20268" started-at="2022-03-18T12:37:50Z" finished-at="2022-03-18T12:38:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="38426" started-at="2022-03-17T03:14:36Z" finished-at="2022-03-17T03:15:14Z">
-      <class name="com.mayur.testcases.paymentValidationsTest">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.mayur.testcases.paymentValidationsTest@16aa0a0a]" name="beforeMethod" is-config="true" duration-ms="13261" started-at="2022-03-17T03:14:36Z" finished-at="2022-03-17T03:14:49Z">
+    <test name="Default test" duration-ms="20268" started-at="2022-03-18T12:37:50Z" finished-at="2022-03-18T12:38:11Z">
+      <class name="com.mayur.testcases.ForTest">
+        <test-method status="PASS" signature="start()[pri:0, instance:com.mayur.testcases.ForTest@50a7bc6e]" name="start" is-config="true" duration-ms="16650" started-at="2022-03-18T12:37:50Z" finished-at="2022-03-18T12:38:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:0, instance:com.mayur.testcases.paymentValidationsTest@16aa0a0a]" name="f" duration-ms="23637" started-at="2022-03-17T03:14:49Z" finished-at="2022-03-17T03:15:13Z">
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="f()[pri:0, instance:com.mayur.testcases.ForTest@50a7bc6e]" name="f" duration-ms="1133" started-at="2022-03-18T12:38:07Z" finished-at="2022-03-18T12:38:08Z">
           <reporter-output>
+            <line>
+              <![CDATA[Your test is started :- f]]>
+            </line>
+            <line>
+              <![CDATA[Your test is success :- f]]>
+            </line>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.mayur.testcases.paymentValidationsTest@16aa0a0a]" name="afterMethod" is-config="true" duration-ms="1483" started-at="2022-03-17T03:15:13Z" finished-at="2022-03-17T03:15:14Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.mayur.testcases.ForTest@50a7bc6e]" name="tearDown" is-config="true" duration-ms="1690" started-at="2022-03-18T12:38:09Z" finished-at="2022-03-18T12:38:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.mayur.testcases.paymentValidationsTest -->
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.mayur.testcases.ForTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

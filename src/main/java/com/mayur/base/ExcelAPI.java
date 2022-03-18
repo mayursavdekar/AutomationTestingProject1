@@ -113,10 +113,10 @@ public class ExcelAPI {
 		fo.close();
 	}
 
-	// get number of rows
+	// get number of rows counted from 1
 	public int getNumberOfRows(String sheetName) {
 		sheet = workbook.getSheet(sheetName);
-		int rowNum = sheet.getLastRowNum();
+		int rowNum = sheet.getLastRowNum()+1;
 		return rowNum;
 
 	}
@@ -129,7 +129,7 @@ public class ExcelAPI {
 		return num;
 	}
 	
-	//get number of colomns in particular row
+	//get number of colomns in particular row counted from 1
 	public int getNumberOfColomns(String sheetName,int rowNumber) {
 		sheet = workbook.getSheet(sheetName);
 		row = sheet.getRow(rowNumber);

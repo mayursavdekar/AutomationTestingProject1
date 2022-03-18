@@ -14,7 +14,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-@Listeners(com.mayur.utility.Listerner.class)
+
 public class addToCartTest extends BasePage{
 	ProductFullViewPage productFullViewPage;
 	@BeforeMethod

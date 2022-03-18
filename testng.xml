@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="MayurSuite">
+  <test thread-count="5" name="MayurTest">
+    <classes>
+      <class name="com.mayur.testcases.LoginTest"/>
+      <class name="com.mayur.testcases.ForTest"/>
+      <class name="com.mayur.testcases.addToCartTest"/>
+      <class name="com.mayur.testcases.HomePageTest"/>
+      <class name="com.mayur.testcases.ProductSearchTest"/>
+      <class name="com.mayur.testcases.CreateAccountTest"/>
+      <class name="com.mayur.testcases.paymentValidationsTest"/> 
+    </classes>
+  </test> 
+</suite>
