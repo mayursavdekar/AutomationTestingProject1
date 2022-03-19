@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [MayurSuite]">
+  <listeners>
+    <listener class-name="com.mayur.utility.Listerner"/>
+  </listeners>
   <test thread-count="5" name="MayurTest(failed)">
     <classes>
-      <class name="com.mayur.testcases.ForTest">
+      <class name="com.mayur.testcases.LoginTestWithDataProvider">
         <methods>
-          <include name="start"/>
-          <include name="g"/>
-          <include name="tearDown"/>
+          <include name="beforeMethod"/>
+          <include name="login" invocation-numbers="0 2 3"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- com.mayur.testcases.ForTest -->
+      </class> <!-- com.mayur.testcases.LoginTestWithDataProvider -->
     </classes>
   </test> <!-- MayurTest(failed) -->
 </suite> <!-- Failed suite [MayurSuite] -->

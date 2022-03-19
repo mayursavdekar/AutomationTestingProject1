@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MayurSuite]">
+  <listeners>
+    <listener class-name="com.mayur.utility.Listerner"/>
+  </listeners>
+  <test thread-count="5" name="MayurTest(failed)">
     <classes>
       <class name="com.mayur.testcases.LoginTestWithDataProvider">
         <methods>
@@ -11,5 +14,5 @@
         </methods>
       </class> <!-- com.mayur.testcases.LoginTestWithDataProvider -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- MayurTest(failed) -->
+</suite> <!-- Failed suite [MayurSuite] -->

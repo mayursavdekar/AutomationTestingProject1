@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -34,16 +35,29 @@ public class ExcelAPI {
 			sheet = workbook.getSheet(sheetName);
 			row = sheet.getRow(rowNumber);
 			cell = row.getCell(colomnNumber);
-			if (cell.getCellType().name().equalsIgnoreCase("string")) {
-				return cell.getStringCellValue();
-
-			} else {
-				double val = cell.getNumericCellValue();
-				return String.valueOf(val);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			return "no matching value";
+			
+			// for below code we have alternate option
+			
+//			if (cell.getCellType().name().equalsIgnoreCase("string")) {
+//				return cell.getStringCellValue();
+//
+//			} else {
+//				double val = cell.getNumericCellValue();
+//				return String.valueOf(val);
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return "no matching value";
+//		}
+			
+		//Altername away by converting any type cell to string cell
+			 DataFormatter df=new DataFormatter();
+			String value = df.formatCellValue(cell);
+			 return value;
+	}
+		catch (Exception e) {
+		    e.printStackTrace();
+		    return null;
 		}
 	}
 
@@ -59,6 +73,8 @@ public class ExcelAPI {
 		}
 		row = sheet.getRow(rowNumber);
 		cell = row.getCell(colomnNumber);
+		
+		
 		if (cell.getCellType().name().equalsIgnoreCase("string")) {
 			return cell.getStringCellValue();
 		} else if (cell.getCellType().name().equalsIgnoreCase("numeric")) {
@@ -68,7 +84,6 @@ public class ExcelAPI {
 			System.out.println("invalid cell types");
 			return null;
 		}
-
 	}
 
 	// writing data in cell using colomn number
@@ -116,7 +131,10 @@ public class ExcelAPI {
 	// get number of rows counted from 1
 	public int getNumberOfRows(String sheetName) {
 		sheet = workbook.getSheet(sheetName);
-		int rowNum = sheet.getLastRowNum()+1;
+		//this will return number of rows excluding header row in excel
+		//int rowNum=sheet.getLastRowNum();
+		//this will return total number of rows in excel 
+		int rowNum = sheet.getPhysicalNumberOfRows(); 
 		return rowNum;
 
 	}
