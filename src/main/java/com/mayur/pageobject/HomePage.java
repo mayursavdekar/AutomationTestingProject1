@@ -56,5 +56,4 @@ public class HomePage extends BasePage {
 		productSearchbtn.click();
 		return new SearchProductResultPage();
 	}
-
 }

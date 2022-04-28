@@ -8,20 +8,79 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">MayurSuite</th></tr>
-<tr><td><a href="#t0">MayurTest</a></td><td class="num">1</td><td class="num">0</td><td class="num attn">3</td><td class="num">105,918</td><td></td><td></td></tr>
+<tr><th colspan="7">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">10</td><td class="num">0</td><td class="num attn">2</td><td class="num">460,547</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">MayurSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">MayurTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.mayur.testcases.LoginTestWithDataProvider</td><td><a href="#m0">login</a></td><td rowspan="3">1647675834711</td><td rowspan="3">9427</td></tr><tr class="failedeven"><td><a href="#m1">login</a></td></tr><tr class="failedeven"><td><a href="#m2">login</a></td></tr><tr><th colspan="4">MayurTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.mayur.testcases.LoginTestWithDataProvider</td><td><a href="#m3">login</a></td><td rowspan="1">1647675805804</td><td rowspan="1">12222</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.mayur.testcases.RegistrationWithDataProvider</td><td><a href="#m0">regDP</a></td><td rowspan="1">1651074238715</td><td rowspan="1">28029</td></tr><tr class="failedodd"><td rowspan="1">com.mayur.testcases.paymentCalculationsTest</td><td><a href="#m1">paymentCheck</a></td><td rowspan="1">1651074153307</td><td rowspan="1">36364</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.mayur.testcases.ForTest</td><td><a href="#m2">reg</a></td><td rowspan="1">1651073820261</td><td rowspan="1">14</td></tr><tr class="passedodd"><td rowspan="1">com.mayur.testcases.HomePageTest</td><td><a href="#m3">homeValidations</a></td><td rowspan="1">1651074094464</td><td rowspan="1">15897</td></tr><tr class="passedeven"><td rowspan="4">com.mayur.testcases.LoginTestWithDataProvider</td><td><a href="#m4">login</a></td><td rowspan="4">1651073909246</td><td rowspan="4">13409</td></tr><tr class="passedeven"><td><a href="#m5">login</a></td></tr><tr class="passedeven"><td><a href="#m6">login</a></td></tr><tr class="passedeven"><td><a href="#m7">login</a></td></tr><tr class="passedodd"><td rowspan="1">com.mayur.testcases.PlaceOrderTest</td><td><a href="#m8">placeOrder</a></td><td rowspan="1">1651073832817</td><td rowspan="1">38004</td></tr><tr class="passedeven"><td rowspan="1">com.mayur.testcases.ProductSearchTest</td><td><a href="#m9">productSearch</a></td><td rowspan="1">1651074135068</td><td rowspan="1">4435</td></tr><tr class="passedodd"><td rowspan="1">com.mayur.testcases.RegistrationWithDataProvider</td><td><a href="#m10">regDP</a></td><td rowspan="1">1651074200486</td><td rowspan="1">9809</td></tr><tr class="passedeven"><td rowspan="1">com.mayur.testcases.addToCartTest</td><td><a href="#m11">addToCart</a></td><td rowspan="1">1651073882599</td><td rowspan="1">15669</td></tr></tbody>
 </table>
-<h2>MayurTest</h2><h3 id="m0">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>myproject@gmail.com</td><td>mypro</td><td>3</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is failed :- login</div></td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at com.mayur.testcases.LoginTestWithDataProvider.login(LoginTestWithDataProvider.java:49)
+<h2>Test</h2><h3 id="m0">com.mayur.testcases.RegistrationWithDataProvider#regDP</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{birthDay=12, country=United States, firstname=lalit, address=kale wada, gender=male, city=jalgaon, mobile=9821, receive_special_offer_checkbox=yes, lastname=savdekar, zipcode=22222, birthMonth=12, password=lalit123, birthYear=2012, newsletter_checkbox=no, address_firstname=NA, address_lastname=NA, alias=abcd, company=mycompanynew, state=Alaska}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- regDP<br/>Your test is failed :- regDP</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //label[contains(text(),&apos;Title&apos;)]&apos; (tried for 10 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at com.mayur.pageobject.RegistrationFormPage.selectGender(RegistrationFormPage.java:73)
+	at com.mayur.testcases.RegistrationWithDataProvider.regDP(RegistrationWithDataProvider.java:39)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//label[contains(text(),&apos;Title&apos;)]&quot;}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-S33VJ14&apos;, ip: &apos;192.168.10.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64514}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: d590bf6a85544bf5827831cc5e7fb36d
+*** Element info: {Using=xpath, value=//label[contains(text(),&apos;Title&apos;)]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 27 more
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>admin</td><td>admin</td><td>4</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is failed :- login</div></td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at com.mayur.testcases.LoginTestWithDataProvider.login(LoginTestWithDataProvider.java:49)
+<h3 id="m1">com.mayur.testcases.paymentCalculationsTest#paymentCheck</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- paymentCheck<br/>Your test is failed :- paymentCheck</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@id=&apos;product_price_1_1_653969&apos;]&quot;}
+  (Session info: chrome=100.0.4896.127)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-S33VJ14&apos;, ip: &apos;192.168.10.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_202&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 100.0.4896.127, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64355}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 1dda5770a6c88f4879535d127b199210
+*** Element info: {Using=xpath, value=//span[@id=&apos;product_price_1_1_653969&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.getText(Unknown Source)
+	at com.mayur.pageobject.PaymentPage.validatePaymentCalculations(PaymentPage.java:60)
+	at com.mayur.testcases.paymentCalculationsTest.paymentCheck(paymentCalculationsTest.java:57)
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>myproject@gmail.com</td><td>myproject@1</td><td>1</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is failed :- login</div></td></tr><tr><th colspan="3">Exception</th></tr><tr><td colspan="3"><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at com.mayur.testcases.LoginTestWithDataProvider.login(LoginTestWithDataProvider.java:49)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>myproject@gmail.com</td><td>myproject@123</td><td>2</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is success :- login</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.mayur.testcases.ForTest#reg</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- reg<br/>Your test is success :- reg</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.mayur.testcases.HomePageTest#homeValidations</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- homeValidations<br/>Your test is success :- homeValidations</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>myproject@gmail.com</td><td>myproject@1</td><td>1</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is success :- login</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>myproject@gmail.com</td><td>myproject@123</td><td>2</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is success :- login</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>admin</td><td>admin</td><td>4</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is success :- login</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.mayur.testcases.LoginTestWithDataProvider#login</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr><tr class="param stripe"><td>myproject@gmail.com</td><td>mypro</td><td>3</td></tr><tr><th colspan="3">Messages</th></tr><tr><td colspan="3"><div class="messages">Your test is started :- login<br/>Your test is success :- login</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">com.mayur.testcases.PlaceOrderTest#placeOrder</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- placeOrder<br/>Your test is success :- placeOrder</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">com.mayur.testcases.ProductSearchTest#productSearch</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- productSearch<br/>Your test is success :- productSearch</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">com.mayur.testcases.RegistrationWithDataProvider#regDP</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{birthDay=10, country=United States, firstname=mayur, address=ram mandir, gender=male, city=pune, mobile=1234, receive_special_offer_checkbox=no, lastname=savdekar, zipcode=11111, birthMonth=10, password=mayur123, birthYear=2010, newsletter_checkbox=yes, address_firstname=NA, address_lastname=NA, alias=abcd, company=mycompany, state=Alaska}</td></tr><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- regDP<br/>Your test is success :- regDP</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">com.mayur.testcases.addToCartTest#addToCart</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Your test is started :- addToCart<br/>Your test is success :- addToCart</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

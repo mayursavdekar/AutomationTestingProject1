@@ -43,7 +43,7 @@ public class ProductFullViewPage extends BasePage{
  		else if(size.equalsIgnoreCase("large")||size.equalsIgnoreCase("l")) {
 			finalSize="L";
 		}
-		selectByVisible(selectSizeDD, finalSize);
+		selectByVisibleText(selectSizeDD, finalSize);
 	}
 	public void clickAddToCart(){
 	addToCartBtn.click();

@@ -8,6 +8,8 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -19,13 +21,14 @@ public class BasePage {
 	String propertiesFilePath=System.getProperty("user.dir")+"/configurations/config.properties";
 	//"./configurations/config.properties";
 	public String url;
+	public String log4jpath="./configurations/log4j.properties";
 
 	//launching browser 
 	public void launchBrowser() {
 		String browsername = getData("browser");
 		this.url= getData("url");
 		if (browsername.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "D:\\Selenium library\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "D:\\Selenium library\\chromedriver1.exe");
 			driver = new ChromeDriver();	
 		}
 		if (browsername.equalsIgnoreCase("firefox")) {
@@ -33,15 +36,14 @@ public class BasePage {
 			driver = new FirefoxDriver();
 			//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		}
+		PropertyConfigurator.configure(log4jpath);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get(url);
 		driver.manage().window().maximize();
-
 	}
 
 	// reading data from properties file using key
 	public String getData(String key) {
-
 		try {
 			File file=new File(propertiesFilePath);
 			FileInputStream fi=new FileInputStream(file);
@@ -60,8 +62,8 @@ public class BasePage {
 		select.selectByValue(value);
 	}
 
-	//select by visibletext reusable method
-	public void selectByVisible(WebElement element ,String visibleText){
+	//select by visible-text reusable method
+	public void selectByVisibleText(WebElement element ,String visibleText){
 		Select select= new Select(element);
 		select.selectByVisibleText(visibleText);
 	}

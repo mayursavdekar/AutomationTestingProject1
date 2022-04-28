@@ -3,15 +3,19 @@ package com.mayur.pageobject;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.mayur.base.BasePage;
 
 public class RegistrationFormPage extends BasePage {
-
+    @FindBy(xpath = "//label[contains(text(),'Title')]")
+    WebElement titleTextForGender;
 	@FindBy(xpath = "//input[@id='id_gender1']") 
 	WebElement genderSelectMale;
 	@FindBy(xpath = "//input[@id='id_gender2']") 
@@ -65,6 +69,8 @@ public class RegistrationFormPage extends BasePage {
 		PageFactory.initElements(driver,this);
 	}
 	public void selectGender(String gender) {
+		WebDriverWait wait=new WebDriverWait(driver, 10);
+		wait.until(ExpectedConditions.visibilityOf(titleTextForGender));
 		if(gender.equalsIgnoreCase("male")) {
 			genderSelectMale.click();
 		}
@@ -82,9 +88,9 @@ public class RegistrationFormPage extends BasePage {
 		lastNameTextbox.sendKeys(lastname);
 	}
 	public void enterPassword(String password) {
-	    passwordTextbox.sendKeys(password);
+		passwordTextbox.sendKeys(password);
 	}
-  
+
 	public void selectBirthDay(String day){
 		String[] var = day.split("\\.");
 		selectByValue(birthDay, var[0]);
@@ -97,11 +103,15 @@ public class RegistrationFormPage extends BasePage {
 		String[] var=year.split("\\.");
 		selectByValue(birthYear, var[0]);
 	}
-	public void checkBoxForNewsletter() {
-		checkboxNewsletter.click();
+	public void checkBoxForNewsletter(String data) {
+		if (data.equalsIgnoreCase("yes")) {
+			checkboxNewsletter.click();	
+		}		
 	}
-	public void checkBoxForReceiveSpecialOffer(){
-		checkBoxReceiveSpecialOffer.click();
+	public void checkBoxForReceiveSpecialOffer(String data){
+		if (data.equalsIgnoreCase("yes")) {
+			checkBoxReceiveSpecialOffer.click();
+		}
 	}
 	public void enterCompany(String name) {
 		Company.sendKeys(name);
@@ -116,14 +126,14 @@ public class RegistrationFormPage extends BasePage {
 		addressCity.sendKeys(city);
 	}
 	public void selectStateByName(String state) {
-		selectByVisible(addressState, state);
+		selectByVisibleText(addressState, state);
 	}
 	public void enterZipzode(String zipcode) {
-	String[] var=zipcode.split("\\.");
+		String[] var=zipcode.split("\\.");
 		addressZipcode.sendKeys(var[0]);
 	}
 	public void selectCountry(String country) {
-		selectByVisible(addressCountry, country);
+		selectByVisibleText(addressCountry, country);
 	}
 	public void enterAddressAdditionalInfo(String info) {
 		addressAdditionalInfo.sendKeys(info);
